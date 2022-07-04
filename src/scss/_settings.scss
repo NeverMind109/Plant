@@ -25,7 +25,7 @@ html {
 }
 
 img {
-  height: auto;
+  height: 100%;
   max-width: 100%;
   object-fit: cover;
 }
@@ -127,6 +127,17 @@ a {
   position: relative;
 }
 
+.burger {
+  @include burger;
+
+  display: none;
+  z-index: 100;
+
+  @include tablet {
+    display: block;
+  }
+}
+
 .section-offset {
   padding-bottom: 80px;
 }
@@ -157,4 +168,8 @@ a {
   padding: 16px 32px;
   background-color: var(--color-accent);
   border-radius: 4px;
+}
+
+.header__logo-img {
+  vertical-align: middle;
 }
