@@ -1,0 +1,168 @@
+.hero {
+  &__wrapper {
+    position: relative;
+  }
+  &__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__info {
+    position: relative;
+    width: 50%;
+    padding-top: 53px;
+    margin-right: auto;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 13%;
+      right: -13%;
+      z-index: -1;
+      width: 157px;
+      height: 193px;
+      transform: rotate(5deg);
+      @include image-set("../img/leaf");
+
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &__title {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 92px;
+    color: var(--color-cod);
+    margin-bottom: 24px;
+  }
+  &__descr {
+    margin-bottom: 40px;
+  }
+  &__btn {
+    display: inline-block;
+    margin-bottom: 60px;
+  }
+
+  &__achievements {
+    width: 95%;
+    @include flex-all-sb;
+  }
+  &__number {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    color: var(--color-fir);
+    margin-bottom: 10px;
+  }
+  &__category {
+    font-size: 18px;
+    line-height: 23px;
+
+    color: var(--color-cod);
+  }
+  &__image {
+    width: 50%;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 88px;
+  }
+  &__photo {
+    position: relative;
+    width: max-content;
+  }
+  &__point {
+    position: absolute;
+    z-index: 5;
+    @include flex-v-center;
+
+    &--1 {
+      top: 10%;
+      right: -11%;
+      .hero__circle {
+        &:after {
+          left: 50%;
+        }
+      }
+    }
+    &--2 {
+      top: 24%;
+      left: -12%;
+      .hero__circle {
+        order: 1;
+        &:after {
+          right: 50%;
+        }
+      }
+      .hero__point-content {
+        margin-right: 114px;
+        margin-left: 0;
+      }
+    }
+    &--3 {
+      bottom: 16%;
+      right: -16%;
+      .hero__circle {
+        &:after {
+          left: 50%;
+        }
+      }
+    }
+  }
+  &__circle {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    &::before {
+      content: "";
+      display: none;
+    }
+    &:after {
+      content: "";
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+    &--active {
+      &:before {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        background-color: #f4c300;
+        border-radius: 50%;
+      }
+      &::after {
+        visibility: visible;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        width: 123px;
+        height: 4px;
+        background-color: #519a5a;
+      }
+    }
+  }
+  &__point-content {
+    position: relative;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--color-light);
+    padding: 16px 32px;
+    background-color: rgba(6, 111, 20, 0.7);
+    visibility: hidden;
+    margin-left: 114px;
+    &--active {
+      visibility: visible;
+    }
+  }
+}

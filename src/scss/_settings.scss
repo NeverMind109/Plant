@@ -165,9 +165,15 @@ a {
   font-size: 18px;
   line-height: 23px;
   color: var(--color-light);
-  padding: 16px 32px;
+  padding: 15px 31px;
   background-color: var(--color-accent);
   border-radius: 4px;
+  border: 1px solid var(--color-accent);
+  transition: color 0.3s, background-color 0.3s;
+  &:hover {
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+  }
 }
 
 .header__logo-img {
