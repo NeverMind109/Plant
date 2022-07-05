@@ -1,0 +1,58 @@
+.collection {
+  background-color: var(--color-light);
+  padding-top: 15px;
+  &__wrapper {
+    @include flex-all-sb;
+  }
+  &__info {
+    max-width: 390px;
+  }
+  &__title {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    color: var(--color-cod);
+    margin-bottom: 37px;
+  }
+  &__link {
+    position: relative;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--color-text);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -24px;
+      width: 16px;
+      height: 15px;
+      background-image: url("../img/arrow.svg");
+
+      @include bg-cover;
+    }
+  }
+  &__images {
+    display: flex;
+  }
+  &__item {
+    border-radius: 4px;
+    &--1 {
+      background-color: #f6ede8;
+    }
+    &--2 {
+      background-color: #f0f1f6;
+    }
+    &--3 {
+      background-color: #f6ede8;
+    }
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+  &__element {
+    display: inline-block;
+    padding: 22px 28px;
+  }
+}
