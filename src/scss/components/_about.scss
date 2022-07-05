@@ -1,0 +1,50 @@
+.about {
+  background-color: var(--color-light);
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 26px;
+  }
+  &__image {
+    position: relative;
+    margin-right: 70px;
+  }
+  &__img-background {
+    width: 446px;
+    height: 440px;
+    background-color: var(--color-accent);
+  }
+  &__img {
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    z-index: 5;
+  }
+  &__info {
+    max-width: 516px;
+  }
+  &__label {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--color-accent);
+    margin-bottom: 12px;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__descr {
+    margin-bottom: 16px;
+  }
+  &__inscription {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    color: var(--color-text);
+    margin-bottom: 36px;
+  }
+  &__link {
+    display: inline-block;
+  }
+}
