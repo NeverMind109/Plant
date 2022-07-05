@@ -1,0 +1,112 @@
+.product {
+  background-color: var(--color-light);
+  &__wrapper {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__tabs {
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  &__tab {
+    padding: 0 12px;
+  }
+  &__tab-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--color-text);
+    &:focus {
+      font-size: 18px;
+      line-height: 23px;
+      color: var(--color-accent);
+      background-color: transparent;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &__element {
+    min-height: 283px;
+    width: 270px;
+    transition: transform 0.1s;
+    &--1 {
+      background-color: #eaf2e5;
+    }
+    &--2 {
+      background-color: #f0ebe6;
+    }
+    &--3 {
+      background-color: #e2ece4;
+    }
+    &--4 {
+      background-color: #e7eeed;
+    }
+    &:hover {
+      transform: scale(1.01);
+      transition: transform 0.4s;
+    }
+  }
+  &__link {
+    @include flex-all-sb;
+
+    flex-direction: column;
+    padding: 5px 30px 30px;
+  }
+  &__img {
+    margin-bottom: 10px;
+  }
+  &__name {
+    display: block;
+    align-self: flex-start;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--color-cod);
+    margin-bottom: 10px;
+  }
+  &__rating {
+    align-self: flex-start;
+    margin-bottom: 12px;
+  }
+  &__price {
+    display: block;
+    align-self: flex-start;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-cod);
+  }
+  &__btn-wrapper {
+    text-align: center;
+  }
+  &__btn {
+    display: inline-block;
+  }
+}
+.tabs {
+  &__nav {
+  }
+
+  &__nav-item {
+  }
+
+  &__nav-btn {
+  }
+
+  &__content {
+  }
+
+  &__panel {
+  }
+}
+.rate {
+  &__star {
+  }
+}
