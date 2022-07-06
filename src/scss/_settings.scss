@@ -176,6 +176,9 @@ a {
   }
 }
 
-.header__logo-img {
-  vertical-align: middle;
+.logo {
+  display: inline-block;
+  &__img {
+    vertical-align: middle;
+  }
 }

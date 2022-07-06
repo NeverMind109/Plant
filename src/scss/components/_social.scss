@@ -1,0 +1,20 @@
+.social {
+  display: flex;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    background-color: #edffdd;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 0;
+    border: 1px solid #edffdd;
+    transition: border 0.2s;
+    &:hover {
+      border: 1px solid var(--color-black);
+    }
+  }
+}
