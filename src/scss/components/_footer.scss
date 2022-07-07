@@ -3,13 +3,33 @@
   padding-bottom: 96px;
   &__wrapper {
     display: flex;
+    justify-content: space-between;
     padding-top: 8px;
+
+    @include big-desktop {
+      padding: 0;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+    }
   }
   &__division {
     margin-right: 201px;
+
+    @include big-desktop {
+      margin-right: 0;
+    }
+    @include tablet {
+      width: 100%;
+      order: 1;
+    }
   }
   &__logo {
     margin-bottom: 35px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
   &__logo-img {
     vertical-align: middle;
@@ -17,12 +37,33 @@
   &__descr {
     max-width: 310px;
     margin-bottom: 22px;
+
+    @include mobile {
+      max-width: none;
+    }
+  }
+  &__list {
+    @include tablet {
+      margin-bottom: 35px;
+    }
+    @include mobile {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__navigation {
     margin-right: 115px;
+
+    @include big-desktop {
+      margin-right: 0;
+    }
   }
   &__about {
     margin-right: 115px;
+
+    @include big-desktop {
+      margin-right: 0;
+    }
   }
   &__title {
     font-weight: 700;
@@ -44,5 +85,12 @@
     &:hover {
       color: var(--color-accent);
     }
+  }
+
+  @include tablet {
+    padding-bottom: 75px;
+  }
+  @include small-tablet {
+    padding-bottom: 50px;
   }
 }

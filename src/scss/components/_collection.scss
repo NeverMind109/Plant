@@ -3,9 +3,26 @@
   padding-top: 15px;
   &__wrapper {
     @include flex-all-sb;
+
+    @include big-desktop {
+      display: block;
+    }
   }
   &__info {
     max-width: 390px;
+
+    @include big-desktop {
+      max-width: none;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto 30px;
+    }
+    @include small-tablet {
+      width: 100%;
+    }
+    @include mobile {
+      margin: 0 auto 20px;
+    }
   }
   &__title {
     font-family: "Nunito", sans-serif;
@@ -14,6 +31,18 @@
     line-height: 49px;
     color: var(--color-cod);
     margin-bottom: 37px;
+
+    @include tablet {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @include mobile {
+      font-size: 25px;
+      line-height: 35px;
+    }
+    @include mobile {
+      margin-bottom: 15px;
+    }
   }
   &__link {
     position: relative;
@@ -32,9 +61,23 @@
 
       @include bg-cover;
     }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
   &__images {
     display: flex;
+    flex-shrink: 0;
+
+    @include big-desktop {
+      justify-content: center;
+    }
+    @include tablet {
+      overflow-x: scroll;
+      justify-content: inherit;
+    }
   }
   &__item {
     border-radius: 4px;
@@ -50,9 +93,23 @@
     &:not(:last-child) {
       margin-right: 24px;
     }
+
+    @include tablet {
+      flex-shrink: 0;
+    }
   }
   &__element {
     display: inline-block;
     padding: 22px 28px;
+
+    @include small-tablet {
+      padding: 15px;
+    }
+  }
+  &__img {
+    @include mobile {
+      width: 140px;
+      height: 140px;
+    }
   }
 }

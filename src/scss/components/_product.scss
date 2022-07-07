@@ -5,10 +5,30 @@
   }
   &__title {
     margin-bottom: 24px;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
   }
   &__tabs {
     justify-content: center;
     margin-bottom: 48px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+
+    .tabs__nav-btn--active {
+      font-size: 18px;
+      line-height: 23px;
+      color: var(--color-accent);
+      background-color: transparent;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
   }
   &__tab {
     padding: 0 12px;
@@ -23,12 +43,29 @@
       line-height: 23px;
       color: var(--color-accent);
       background-color: transparent;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 20px;
     }
   }
   &__list {
     display: flex;
     justify-content: space-between;
     margin-bottom: 32px;
+
+    @include big-desktop {
+      overflow-x: scroll;
+    }
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
   &__element {
     min-height: 283px;
@@ -55,15 +92,35 @@
         color: var(--color-accent);
       }
     }
+
+    @include big-desktop {
+      flex-shrink: 0;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+    @include mobile {
+      min-height: 230px;
+      width: 230px;
+    }
   }
   &__link {
     @include flex-all-sb;
 
     flex-direction: column;
     padding: 5px 30px 30px;
+
+    @include mobile {
+      padding: 5px 15px 10px;
+    }
   }
   &__img {
     margin-bottom: 10px;
+
+    @include mobile {
+      height: 120px;
+      width: 90px;
+    }
   }
   &__name {
     display: block;
@@ -75,10 +132,20 @@
     color: var(--color-cod);
     transition: color 0.3s;
     margin-bottom: 10px;
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 7px;
+    }
   }
   &__rating {
     align-self: flex-start;
     margin-bottom: 12px;
+
+    @include mobile {
+      margin-bottom: 7px;
+    }
   }
   &__price {
     display: block;
@@ -89,6 +156,11 @@
     line-height: 19px;
     color: var(--color-cod);
     transition: color 0.3s;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   &__btn-wrapper {
     text-align: center;

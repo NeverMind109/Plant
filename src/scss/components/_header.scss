@@ -20,6 +20,10 @@
     &:hover {
       color: var(--color-accent);
     }
+
+    @include tablet {
+      margin: 0 30px;
+    }
   }
   &__signup {
     font-size: 14px;
@@ -34,5 +38,12 @@
       border: 1px solid var(--color-black);
       color: var(--color-black);
     }
+  }
+
+  @include small-tablet {
+    padding: 35px 0;
+  }
+  @include mobile {
+    padding: 25px 0;
   }
 }
