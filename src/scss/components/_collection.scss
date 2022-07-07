@@ -74,7 +74,7 @@
     @include big-desktop {
       justify-content: center;
     }
-    @include tablet {
+    @include small-tablet {
       overflow-x: scroll;
       justify-content: inherit;
     }
@@ -111,5 +111,9 @@
       width: 140px;
       height: 140px;
     }
+  }
+
+  @include tablet {
+    padding-top: 0;
   }
 }

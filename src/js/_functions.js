@@ -57,7 +57,7 @@ import { burger } from "./functions/burger";
 // });
 
 // Подключение анимаций по скроллу
-// import AOS from 'aos';
+// import AOS from "aos";
 // AOS.init();
 
 // Подключение параллакса блоков при скролле
