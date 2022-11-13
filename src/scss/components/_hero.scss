@@ -106,6 +106,7 @@
     }
   }
   &__figure {
+    text-align: center;
     @include mobile {
       &:not(:last-child) {
         margin-bottom: 10px;
